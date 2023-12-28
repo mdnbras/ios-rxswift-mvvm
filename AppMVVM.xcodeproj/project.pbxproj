@@ -19,6 +19,9 @@
 		4DC4E7A42B3CF24100E9F6FB /* CepViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4DC4E7A22B3CF24100E9F6FB /* CepViewController.xib */; };
 		4DC4E7A82B3CFEDA00E9F6FB /* ApiService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DC4E7A72B3CFEDA00E9F6FB /* ApiService.swift */; };
 		4DC4E7AA2B3D06B600E9F6FB /* CepRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DC4E7A92B3D06B600E9F6FB /* CepRepository.swift */; };
+		4DC4E7AE2B3DBC1A00E9F6FB /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 4DC4E7AD2B3DBC1A00E9F6FB /* GoogleService-Info.plist */; };
+		4DC4E7B12B3DC0F700E9F6FB /* DICProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DC4E7B02B3DC0F700E9F6FB /* DICProtocol.swift */; };
+		4DC4E7B32B3DC11700E9F6FB /* DIContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DC4E7B22B3DC11700E9F6FB /* DIContainer.swift */; };
 		F8D8368AAFDDF9D07D12A7AF /* Pods_AppMVVM.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 10EC3870E6245AFD1B5FDACE /* Pods_AppMVVM.framework */; };
 /* End PBXBuildFile section */
 
@@ -38,6 +41,9 @@
 		4DC4E7A22B3CF24100E9F6FB /* CepViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CepViewController.xib; sourceTree = "<group>"; };
 		4DC4E7A72B3CFEDA00E9F6FB /* ApiService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiService.swift; sourceTree = "<group>"; };
 		4DC4E7A92B3D06B600E9F6FB /* CepRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CepRepository.swift; sourceTree = "<group>"; };
+		4DC4E7AD2B3DBC1A00E9F6FB /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		4DC4E7B02B3DC0F700E9F6FB /* DICProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DICProtocol.swift; sourceTree = "<group>"; };
+		4DC4E7B22B3DC11700E9F6FB /* DIContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DIContainer.swift; sourceTree = "<group>"; };
 		67BC99CC5629B076CB8D8263 /* Pods-AppMVVM.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AppMVVM.debug.xcconfig"; path = "Target Support Files/Pods-AppMVVM/Pods-AppMVVM.debug.xcconfig"; sourceTree = "<group>"; };
 		9DCD1FBBC55C52F0C81980FD /* Pods-AppMVVM.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AppMVVM.release.xcconfig"; path = "Target Support Files/Pods-AppMVVM/Pods-AppMVVM.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -75,6 +81,7 @@
 		4DC4E7852B3CEC7F00E9F6FB /* AppMVVM */ = {
 			isa = PBXGroup;
 			children = (
+				4DC4E7AF2B3DC03400E9F6FB /* DI */,
 				4DC4E7A52B3CFEA400E9F6FB /* Service */,
 				4DC4E7A62B3CFEAA00E9F6FB /* Repository */,
 				4DC4E79C2B3CECEF00E9F6FB /* Controller */,
@@ -87,6 +94,7 @@
 				4DC4E78F2B3CEC8000E9F6FB /* Assets.xcassets */,
 				4DC4E7912B3CEC8000E9F6FB /* LaunchScreen.storyboard */,
 				4DC4E7942B3CEC8000E9F6FB /* Info.plist */,
+				4DC4E7AD2B3DBC1A00E9F6FB /* GoogleService-Info.plist */,
 			);
 			path = AppMVVM;
 			sourceTree = "<group>";
@@ -130,6 +138,15 @@
 				4DC4E7A92B3D06B600E9F6FB /* CepRepository.swift */,
 			);
 			path = Repository;
+			sourceTree = "<group>";
+		};
+		4DC4E7AF2B3DC03400E9F6FB /* DI */ = {
+			isa = PBXGroup;
+			children = (
+				4DC4E7B02B3DC0F700E9F6FB /* DICProtocol.swift */,
+				4DC4E7B22B3DC11700E9F6FB /* DIContainer.swift */,
+			);
+			path = DI;
 			sourceTree = "<group>";
 		};
 		82B71851A159CC8427C9021B /* Pods */ = {
@@ -211,6 +228,7 @@
 			files = (
 				4DC4E7932B3CEC8000E9F6FB /* LaunchScreen.storyboard in Resources */,
 				4DC4E7A42B3CF24100E9F6FB /* CepViewController.xib in Resources */,
+				4DC4E7AE2B3DBC1A00E9F6FB /* GoogleService-Info.plist in Resources */,
 				4DC4E7902B3CEC8000E9F6FB /* Assets.xcassets in Resources */,
 				4DC4E78E2B3CEC7F00E9F6FB /* Main.storyboard in Resources */,
 			);
@@ -267,8 +285,10 @@
 			files = (
 				4DC4E78B2B3CEC7F00E9F6FB /* ViewController.swift in Sources */,
 				4DC4E7A32B3CF24100E9F6FB /* CepViewController.swift in Sources */,
+				4DC4E7B32B3DC11700E9F6FB /* DIContainer.swift in Sources */,
 				4DC4E7872B3CEC7F00E9F6FB /* AppDelegate.swift in Sources */,
 				4DC4E79E2B3CED4A00E9F6FB /* Address.swift in Sources */,
+				4DC4E7B12B3DC0F700E9F6FB /* DICProtocol.swift in Sources */,
 				4DC4E7A02B3CEDC000E9F6FB /* AddressViewModel.swift in Sources */,
 				4DC4E7A82B3CFEDA00E9F6FB /* ApiService.swift in Sources */,
 				4DC4E7AA2B3D06B600E9F6FB /* CepRepository.swift in Sources */,

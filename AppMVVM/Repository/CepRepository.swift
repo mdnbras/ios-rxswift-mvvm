@@ -7,10 +7,14 @@
 
 import RxSwift
 
-class CepRepository {
-    private let apiService: ApiService
+protocol CepRepositoryProtocol  {
+    func getAddress(for cep: String) -> Observable<Address>
+}
+
+final class CepRepository : CepRepositoryProtocol {
+    private let apiService: ApiServiceProtocol
     
-    init(apiService: ApiService) {
+    init(apiService: ApiServiceProtocol = DIContainerFactory.ci.resolve(type: ApiServiceProtocol.self)!) {
         self.apiService = apiService
     }
     

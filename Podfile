@@ -7,5 +7,7 @@ target 'AppMVVM' do
 
   # Pods for AppMVVM
   pod 'RxSwift'
+  pod 'FirebaseCore', :git => 'https://github.com/firebase/firebase-ios-sdk.git', :branch => 'main'
+  pod 'FirebaseFirestore', :git => 'https://github.com/firebase/firebase-ios-sdk.git', :branch => 'main'
 
 end

@@ -1,7 +1,11 @@
 
 import RxSwift
 
-class ApiService {
+protocol ApiServiceProtocol {
+    func fetchCep(for cep: String) -> Observable<Address>
+}
+
+final class ApiService : ApiServiceProtocol {
     
     func fetchCep(for cep: String) -> Observable<Address> {
         let apiURL = "https://viacep.com.br/ws/\(cep)/json"
